@@ -39,11 +39,11 @@ function getRectangleString(width, height) {
   if (width < 2 || height < 2) {
     return '';
   }
-  const horizontalBorder = '┌' + '─'.repeat(width - 2) + '┐\n';
-  const middleRow = '│' + ' '.repeat(width - 2) + '│\n';
-  const verticalBorder = '└' + '─'.repeat(width - 2) + '┘\n';
-  const rectangle = horizontalBorder + middleRow.repeat(height - 2) + verticalBorder;
-  return rectangle; 
+  const horizontalBorder = `┌${'─'.repeat(width - 2)}┐\n`;
+  const middleRow = `│${' '.repeat(width - 2)}│\n`;
+  const verticalBorder = `└${'─'.repeat(width - 2)}┘\n`;
+  const rectangle = `${horizontalBorder}${middleRow.repeat(height - 2)}${verticalBorder}`;
+  return rectangle;
 }
 function encodeToRot13(str) {
   return str.replace(/[a-zA-Z]/g, (char) => {
@@ -57,10 +57,10 @@ function isString(value) {
 }
 function getCardId(value) {
   const cards = [
-    'A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
-    'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
-    'A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥',
-    'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠'
+    'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
+    'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
+    'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
+    'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠',
   ];
   return cards.indexOf(value);
 }

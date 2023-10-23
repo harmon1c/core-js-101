@@ -6,9 +6,9 @@ function getCircleCircumference(radius) {
 }
 function getAverage(value1, value2) {
   const average = (value1 / 2) + (value2 / 2);
-  return isFinite(average) ? average : 0;
+  return Number.isFinite(average) ? average : 0;
 }
-function getDistanceBetweenPoints(x1, y1, x2, y2 ) {
+function getDistanceBetweenPoints(x1, y1, x2, y2) {
   const dx = x2 - x1;
   const dy = y2 - y1;
   return Math.sqrt(dx * dx + dy * dy);
@@ -16,9 +16,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2 ) {
 function getLinearEquationRoot(a, b) {
   if (a === 0) {
     return null;
-  } else {
-    return -b / a;
-  }
+  } return -b / a;
 }
 function getAngleBetweenVectors(x1, y1, x2, y2) {
   const dotProduct = x1 * x2 + y1 * y2;
@@ -34,26 +32,26 @@ function getLastDigit(value) {
 function parseNumberFromString(value) {
   return Number(value);
 }
-function getParallelepipedDiagonal( a, b, c) {
+function getParallelepipedDiagonal(a, b, c) {
   return Math.sqrt(a * a + b * b + c * c);
 }
 function roundToPowerOfTen(num, pow) {
-  const multiplier = Math.pow(10, pow);
+  const multiplier = 10 ** pow;
   return Math.round(num / multiplier) * multiplier;
 }
 function isPrime(n) {
   if (n <= 1) return false;
   if (n <= 3) return true;
-  for (let i = 2; i <= Math.sqrt(n); i++) {
+  for (let i = 2; i <= Math.sqrt(n); i += 1) {
     if (n % i === 0) {
-      return false; 
+      return false;
     }
   }
   return true;
 }
 function toNumber(value, def) {
   const result = parseFloat(value);
-  return isNaN(result) ? def : result;
+  return Number.isNaN(result) ? def : result;
 }
 module.exports = {
   getRectangleArea,

@@ -1,7 +1,6 @@
 const assert = require('assert');
 const tasks = require('../src/04-conditions-n-loops-tasks');
 it.optional = require('../extensions/it-optional');
-
 describe('04-conditions-n-loops-tasks', () => {
   it.optional('getFizzBuzz should return the output value according specification', () => {
     [
@@ -16,7 +15,6 @@ describe('04-conditions-n-loops-tasks', () => {
         `getFizzBuzz shoud return ${num} for ${num}, but actually ${actual}`,
       );
     });
-
     [
       3, 6, 9, 12, 18, 21, 24, 27,
       33, 36, 39, 42, 48, 51, 54, 57,
@@ -30,7 +28,6 @@ describe('04-conditions-n-loops-tasks', () => {
         `getFizzBuzz shoud return 'Fizz' for ${num}, but actually ${actual}`,
       );
     });
-
     [
       5, 10, 20, 25, 35, 40, 50, 55, 65, 70, 80, 85, 95, 100,
     ].forEach((num) => {
@@ -41,7 +38,6 @@ describe('04-conditions-n-loops-tasks', () => {
         `getFizzBuzz shoud return 'Buzz' for ${num}, but actually ${actual}`,
       );
     });
-
     [
       15, 30, 45, 60, 75, 90,
     ].forEach((num) => {
@@ -53,8 +49,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('getFactorial should return the functorial of given number', () => {
     [
       { n: 1, expected: 1 },
@@ -69,8 +63,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('getSumBetweenNumbers should return the sum inside the specified interval', () => {
     [
       { n1: 1, n2: 2, expected: 3 },
@@ -85,8 +77,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('isTriangle should check if triangle can be built', () => {
     [
       { sides: [1, 2, 3], expected: false },
@@ -108,8 +98,6 @@ describe('04-conditions-n-loops-tasks', () => {
       });
     });
   });
-
-
   it.optional('doRectanglesOverlap should return true if rectangles overlap', () => {
     [
       {
@@ -177,8 +165,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('isInsideCircle should return true if point lies inside of the specified circle', () => {
     [
       {
@@ -218,8 +204,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('findFirstSingleChar should return the first unrepeated char from string', () => {
     [
       { str: 'The quick brown fox jumps over the lazy dog', expected: 'T' },
@@ -234,8 +218,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('getIntervalString should return the string representation of math interval', () => {
     [
       {
@@ -279,8 +261,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('reverseString should return the specified string in reverse order', () => {
     [
       { str: 'The quick brown fox jumps over the lazy dog', expected: 'god yzal eht revo spmuj xof nworb kciuq ehT' },
@@ -296,8 +276,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('reverseInteger should return the specified number in reverse order', () => {
     [
       { num: 12345, expected: 54321 },
@@ -313,8 +291,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('isCreditCardNumber should validate CCN', () => {
     [
       79927398713,
@@ -344,8 +320,6 @@ describe('04-conditions-n-loops-tasks', () => {
         `CCN ${ccn} is valid, but actually not`,
       );
     });
-
-
     [
       4571234567890111,
       5436468789016589,
@@ -359,8 +333,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('getDigitalRoot should return the cyclic sum of all digits', () => {
     [
       { num: 12345, expected: 6 },
@@ -376,8 +348,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('isBracketsBalanced should check the balanced brackets', () => {
     [
       '[]', '[[][][[]]]', '[[][]]', '', '<>', '{}', '()', '<()>', '{<>}', '[{}]',
@@ -388,8 +358,6 @@ describe('04-conditions-n-loops-tasks', () => {
         `'${str}' has balanced brackets, but actually not`,
       );
     });
-
-
     [
       '[[]', '][', '[][][][][[]', '{)', '<]', '(}', '[{]}', '{<}>', '{{[(])}}', '{}()[]<',
       '{', '(', '[', '({}[]<>(((())))', '{{[]}}>',
@@ -400,8 +368,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('toNaryString should return the n-ary string representation of number', () => {
     [
       { num: 1024, n: 2, expected: '10000000000' },
@@ -423,8 +389,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('getCommonDirectoryPath should return a common path in the file system', () => {
     [
       {
@@ -449,8 +413,6 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('getMatrixProduct should return the product of two specified matrices', () => {
     [
       {
@@ -489,12 +451,9 @@ describe('04-conditions-n-loops-tasks', () => {
       );
     });
   });
-
-
   it.optional('evaluateTicTacToePosition should return the winner if defined', () => {
     const X = 'X';
     const O = '0';
-
     function positionToSting(position) {
       let result = '';
       for (let i = 0; i < 3; i += 1) {
@@ -507,7 +466,6 @@ describe('04-conditions-n-loops-tasks', () => {
       result += '-------------';
       return result;
     }
-
     [[
       [X, X, X],
       [O, O],
@@ -549,7 +507,6 @@ describe('04-conditions-n-loops-tasks', () => {
         `Position: \n${positionToSting(data)}\n  The winner is X, but actually '${actual}'`,
       );
     });
-
     [[
       [O, O, O],
       [undefined, X, X],
@@ -591,7 +548,6 @@ describe('04-conditions-n-loops-tasks', () => {
         `Position: \n${positionToSting(data)}\n  The winner is O, but actually '${actual}'`,
       );
     });
-
     [[
       [undefined, undefined, undefined],
       [undefined, undefined, undefined],
